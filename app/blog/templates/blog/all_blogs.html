@@ -9,13 +9,13 @@
 <body>
     <h1>hello blogs!</h1>
     {% for i in blog %}
-    {{ i.description }}
-    <br>
-    <img src="{{ i.image.url }}" style="width: 550px; height: auto;">
-    {% if i.url %}
-    <br>
-    <a href="{{ i.url }}">link</a>
-    {% endif %}
+        {{ i.description }}
+        <br>
+        <img src="{{ i.image.url }}" style="width: 550px; height: auto;"><br>
+        {% if i.url %}
+            <br>
+            <a href="{{ i.url }}">link</a>
+        {% endif %}
     {% endfor %}
 </body>
 </html>
