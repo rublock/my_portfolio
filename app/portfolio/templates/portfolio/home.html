@@ -27,22 +27,31 @@
 </div>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    {% for i in projects %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="{{ i.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ i.description }}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Открыть</button>
+    <div class="container mainContainer">
+        {% for i in projects %}
+            <div style="margin: 0 20px 20px 20px;">
+              <div class="card shadow-sm">
+                <img src="{{ i.image.url }}">
+                <div class="card-body">
+                    <h2 class="card-text">{{ i.title }}</h2>
+                  <p class="card-text">{{ i.description|truncatechars:100 }}</p>
+                    {% if i.url%}
+                        <a href="{{ i.url }}" class="btn btn-primary" style="margin-bottom: 7px;">
+                            WEB site&nbsp;<img src="{% static 'portfolio/img/web.png' %}" style="width: 20px; margin-bottom: 3px;"/>
+                        </a>
+                    {% endif %}
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="skillsContainer">
+                          {% for v in i.tech.values %}
+                            <span class="badge bg-light text-dark h-50 border border-dark">{{ v }}</span>
+                          {% endfor %}
+                      </div>
+                  </div>
                 </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
-          </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
 <script src="{% static 'portfolio/js/bootstrap.min.js' %}"></script>
