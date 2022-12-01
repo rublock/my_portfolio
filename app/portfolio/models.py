@@ -7,3 +7,6 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/img')
     url = models.URLField(blank=True)  # open in new page
     tech = models.JSONField()
+
+    def __str__(self):
+        return self.title

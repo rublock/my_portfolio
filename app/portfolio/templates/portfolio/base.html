@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/bootstrap.min.css' %}" >
+    <title>Document</title>
+</head>
+<body>
+
+<header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <span class="fs-4" style="margin:0 auto 0 15px; font-size: 21px">Mack's portfolio</span>
+  </a>
+
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="https://github.com/rublock" class="nav-link">Github</a></li>
+    <li class="nav-item"><a href="https://github.com/rublock" class="nav-link">CV download</a></li>
+    <li class="nav-item"><a href="{% url 'blog:all_blogs' %}" class="nav-link">Blog</a></li>
+  </ul>
+</header>
+
+{% block content %}{% endblock %}
+
+<script src="{% static 'portfolio/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
