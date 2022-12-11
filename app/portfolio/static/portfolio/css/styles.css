@@ -14,7 +14,7 @@
 
 
 .square{
-  width: 500px;
+  max-width: 500px;
   background: white;
   border-radius: 4px;
   box-shadow: 0px 20px 50px #D9DBDF;
@@ -25,25 +25,30 @@
   margin: 20px;
 }
 
-.mask{
+.mask {
+  width: 100%;
+  height: auto;
   clip: rect(0px, 460px, 220px, 0px);
   border-radius: 4px;
+  text-align: justify;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #C8C8C8;
+  line-height: 18px;
 }
 
-img{
-  width: 460px;
-  }
-
-.h1{
+.title {
   margin: auto;
   text-align: left;
   margin-top: 24px;
   padding-left: 30px;
 
   font-family: 'Merriweather', serif;
-  font-size: 24px;
+  font-size: 20px;
 }
-p{
+.description {
  text-align: justify;
  padding-left: 30px;
  padding-right: 30px;
@@ -68,4 +73,19 @@ p{
     font-size: 12px;
     cursor: pointer;
     font-family: 'merriweather';
+    text-decoration: none;
+}
+
+.skillsContainer {
+     text-align: justify;
+     padding-left: 30px;
+     padding-right: 30px;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 12px;
+     color: #C8C8C8;
+     line-height: 18px;
+}
+
+.skills {
+    cursor: pointer;
 }
